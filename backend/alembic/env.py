@@ -22,7 +22,7 @@ from backend.app.models import InventoryLog, Item, Location  # noqa: F401
 config = context.config
 
 # Override the connection string with our settings (from .env)
-config.set_main_option("sqlalchemy.url", settings.database_url)
+config.set_main_option("sqlalchemy.url", settings.effective_database_url)
 
 # Set up Python logging from alembic.ini
 if config.config_file_name is not None:

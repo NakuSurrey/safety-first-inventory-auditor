@@ -20,7 +20,7 @@ from backend.app.core.config import settings
 # send a quick "are you alive?" ping to the database. If the connection
 # died (e.g. database restarted), discard it and create a new one.
 engine = create_engine(
-    settings.database_url,
+    settings.effective_database_url,
     pool_pre_ping=True,
     pool_size=5,
     max_overflow=10,
