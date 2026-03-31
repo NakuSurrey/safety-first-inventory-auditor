@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Environment variables (NEVER commit secrets)
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Database local files
+*.db
+
+# YOLO training artifacts
+runs/
+weights/
+*.pt
+*.onnx
+*.tflite
+
+# Node / React Native
+node_modules/
+.expo/
+*.apk
+*.ipa
+
+# Logs
+*.log
+
+# Test coverage
+htmlcov/
+.coverage
+*.md
