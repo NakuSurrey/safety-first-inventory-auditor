@@ -38,9 +38,11 @@ models/dataset/test/
 # Model verification output
 models/verify_output/
 
-# Node / React Native
+# Node / Expo / React Native
 node_modules/
 .expo/
+web-build/
+dist/
 *.apk
 *.ipa
 
@@ -50,4 +52,3 @@ node_modules/
 # Test coverage
 htmlcov/
 .coverage
-*.md
