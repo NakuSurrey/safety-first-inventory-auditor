@@ -14,10 +14,12 @@ pydantic-settings==2.5.0
 
 # CORS (built into FastAPI, no extra package needed)
 
-# YOLO / Computer Vision (commented out for deployment — added in Phase 4)
-# ultralytics==8.3.0
-# opencv-python-headless==4.10.0.84
-# onnxruntime==1.19.0
+# File uploads (needed for POST /api/detect image upload)
+python-multipart==0.0.9
+
+# YOLO / Computer Vision (needed for server-side detection in Phase 5)
+ultralytics==8.3.0
+opencv-python-headless==4.10.0.84
 
 # Testing
 pytest==8.3.3

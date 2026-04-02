@@ -10,7 +10,7 @@ import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from backend.app.api.routes import health, inventory, items, locations
+from backend.app.api.routes import detect, health, inventory, items, locations
 from backend.app.core.config import settings
 from backend.app.db.base import Base
 from backend.app.db.session import engine
@@ -52,6 +52,7 @@ app.add_middleware(
 
 # ─── REGISTER ROUTES ────────────────────────────────────────
 app.include_router(health.router)
+app.include_router(detect.router)
 app.include_router(items.router)
 app.include_router(locations.router)
 app.include_router(inventory.router)

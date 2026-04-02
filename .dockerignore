@@ -1,0 +1,52 @@
+# Do not send these to Docker — keeps the image small and fast to build
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+
+# Git
+.git/
+.gitignore
+
+# Environment (Railway sets env vars separately)
+.env
+
+# Dataset images (200MB+ — not needed on the server)
+models/dataset/
+models/verify_output/
+
+# Training checkpoints (not needed — we only need best.pt)
+models/runs/detect/ppe_model/weights/last.pt
+models/runs/detect/ppe_model/weights/epoch*.pt
+models/runs/detect/ppe_model/weights/best.onnx
+models/runs/detect/ppe_model/weights/best_saved_model/
+
+# TFLite (not needed on server — only needed for mobile native)
+*.tflite
+
+# Mobile app (runs in browser, not on the server)
+mobile/
+node_modules/
+
+# Training scripts (not needed on the server)
+models/download_dataset.py
+models/filter_dataset.py
+models/train.py
+models/verify.py
+models/export.py
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Docs
+*.md
+PLAN.md
+
+# Test database
+*.db
+*.db-journal

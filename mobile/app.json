@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "Safety-First Inventory Auditor",
+    "slug": "safety-first-inventory-auditor",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "backgroundColor": "#1a1a2e"
+    },
+    "platforms": ["web", "android", "ios"],
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Safety-First Auditor to access your camera for PPE detection."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Safety-First Auditor to access your photos for PPE detection."
+        }
+      ]
+    ]
+  }
+}
