@@ -17,8 +17,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 WORKDIR /app
 
 # ── Install Python dependencies ────────────────────────────────────────
-# Copy requirements first — Docker caches this layer
-# So if requirements don't change, Docker skips reinstalling
+# IMPORTANT: Install CPU-only PyTorch FIRST from PyTorch's CPU index.
+# ultralytics auto-installs PyTorch WITH CUDA (~2.5 GB) if torch is missing.
+# Railway has no GPU, so we only need CPU torch (~200 MB).
+# By installing torch first, ultralytics sees it exists and skips the CUDA version.
+RUN pip install --no-cache-dir torch torchvision --index-url https://download.pytorch.org/whl/cpu
+
+# Now install the rest of the dependencies
 COPY backend/requirements.txt ./backend/requirements.txt
 RUN pip install --no-cache-dir -r backend/requirements.txt
 
