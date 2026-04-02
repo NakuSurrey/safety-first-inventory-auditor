@@ -1,0 +1,19 @@
+# Phase 4 — AI Model Training Dependencies
+# These are installed LOCALLY on your machine for training.
+# They are NOT needed on the server (Render).
+# The server only needs the final .tflite file, not the training tools.
+
+# YOLO training framework
+ultralytics==8.3.0
+
+# Computer vision (headless = no GUI needed)
+opencv-python-headless==4.10.0.84
+
+# Roboflow dataset download
+roboflow>=1.1.0
+
+# Environment variables
+python-dotenv==1.0.1
+
+# TFLite export (installed automatically by ultralytics when needed)
+# tensorflow>=2.13.0

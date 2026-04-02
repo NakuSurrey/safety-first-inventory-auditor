@@ -30,6 +30,14 @@ weights/
 *.onnx
 *.tflite
 
+# Dataset images (downloaded from Roboflow — too large for Git)
+models/dataset/train/
+models/dataset/valid/
+models/dataset/test/
+
+# Model verification output
+models/verify_output/
+
 # Node / React Native
 node_modules/
 .expo/

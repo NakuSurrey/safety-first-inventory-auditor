@@ -1,0 +1,18 @@
+# YOLOv8 Dataset Configuration
+# This file tells YOLOv8 where to find images and what classes to detect.
+#
+# Paths are relative to THIS file's location.
+# After running filter_dataset.py, only 3 classes remain.
+
+train: ./train/images
+val: ./valid/images
+test: ./test/images
+
+# Number of classes
+nc: 3
+
+# Class names (index must match the class_id in label .txt files)
+names:
+  0: Hardhat
+  1: Safety-Vest
+  2: Person
