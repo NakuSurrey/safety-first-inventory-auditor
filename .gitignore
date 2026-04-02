@@ -24,11 +24,16 @@ Thumbs.db
 *.db
 
 # YOLO training artifacts
-runs/
-weights/
-*.pt
 *.onnx
 *.tflite
+
+# Ignore all training runs EXCEPT the final best.pt needed for deployment
+models/runs/detect/ppe_model/weights/last.pt
+models/runs/detect/ppe_model/weights/epoch*.pt
+models/runs/detect/ppe_model/weights/best_saved_model/
+
+# Ignore all other .pt files (like yolov8n.pt base model)
+/yolov8n.pt
 
 # Dataset images (downloaded from Roboflow — too large for Git)
 models/dataset/train/
@@ -52,3 +57,4 @@ dist/
 # Test coverage
 htmlcov/
 .coverage
+*.md
